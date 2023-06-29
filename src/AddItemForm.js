@@ -22,8 +22,8 @@ export default function AddItemForm({ addItem }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="mb-3">
+    <form onSubmit={handleSubmit} className="border border-success rounded d-flex flex-column align-items-center">
+      <div className="mb-3 w-100">
         <label htmlFor="name" className="form-label">Name</label>
         <input
           type="text"
@@ -35,7 +35,7 @@ export default function AddItemForm({ addItem }) {
           required
         />
       </div>
-      <div className="mb-3">
+      <div className="mb-3 w-100">
         <label htmlFor="price" className="form-label">Price</label>
         <input
           type="number"
@@ -47,7 +47,7 @@ export default function AddItemForm({ addItem }) {
           required
         />
       </div>
-      <div className="mb-3">
+      <div className="mb-3 w-100">
         <label htmlFor="imageUrl" className="form-label">URL Image</label>
         <input
           type="text"
@@ -59,7 +59,7 @@ export default function AddItemForm({ addItem }) {
           required
         />
       </div>
-      <button type="submit" className="btn btn-primary">Add</button>
+      <button type="submit" className="btn btn-primary w-75 ">Add</button>
     </form>
   );
 }
