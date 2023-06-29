@@ -17,8 +17,8 @@ export default function AddItemForm({ addItem }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addItem(form); // Llamamos a la función addItem pasándole el formulario
-    setForm({ name: '', price: '', imageUrl: '' }); // Reiniciamos el formulario
+    addItem(form); 
+    setForm({ name: '', price: '', imageUrl: '' });
   };
 
   return (
