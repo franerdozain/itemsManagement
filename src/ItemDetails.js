@@ -6,7 +6,7 @@ export default function ItemDetails({ selectedItem }) {
     }
 
     return (
-        <div className="col-6 col-md-3">
+        <div className="col-6 col-md-3 w-100 border border-success rounded">
         <div className="card">
           {selectedItem.imageUrl && (
             <img
@@ -16,8 +16,8 @@ export default function ItemDetails({ selectedItem }) {
             />
           )}
           <div className="card-body">
-            <h5 className="card-title">{selectedItem.name}</h5>
-            <p className="card-text">$ {selectedItem.price}</p>
+            <h5 className="card-title text-center">{selectedItem.name}</h5>
+            <p className="card-text text-center">$ {selectedItem.price}</p>
           </div>
         </div>
       </div>

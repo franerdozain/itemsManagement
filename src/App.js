@@ -29,13 +29,31 @@ function App() {
     setOpenForm(true)
   }
 
-  console.log(items);
   return (
     <div>
-      <ItemsList items={items} setSelectedItem={setSelectedItem} />
-      <button onClick={handleClick}>Add New Item</button>
-      <ItemDetails selectedItem={selectedItem} />
-      {openForm && <AddItemForm addItem={addItem} />}
+      <header className="header d-flex justify-content-center">
+        <div className="container">
+          <h1 className="text-center">Items Management</h1>
+        </div>
+      </header>
+      <div className="container">
+        <div className="row flex-row">
+          <div className="col-md-4 mt-5 border border-success rounded p-0">
+            <ItemsList items={items} setSelectedItem={setSelectedItem} />
+          </div>
+          <div className="col-md-4 mt-5">
+            <ItemDetails selectedItem={selectedItem} />
+          </div>
+          <div className="col-md-4 mt-5">
+            {openForm && <AddItemForm addItem={addItem} />}
+          </div>
+          <div className="col-md-12 mt-5 text-center">
+            <button className="btn btn-primary btn-lg w-25" onClick={handleClick}>
+              Add New Item
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
