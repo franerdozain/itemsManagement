@@ -17,7 +17,7 @@ export default function ItemDetails({ selectedItem }) {
           )}
           <div className="card-body">
             <h5 className="card-title">{selectedItem.name}</h5>
-            <p className="card-text">{selectedItem.price}</p>
+            <p className="card-text">$ {selectedItem.price}</p>
           </div>
         </div>
       </div>
